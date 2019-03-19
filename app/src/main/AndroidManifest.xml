@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.classroom.classroom1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ClassRoom"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ShowImagesActivity"
+            android:label="@string/title_activity_show_images"
+            android:parentActivityName=".ClassroomDetail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.classroom.classroom1.ClassroomDetail" />
+        </activity>
+        <activity
+            android:name=".AddPostActivity"
+            android:parentActivityName=".ClassroomDetail"></activity>
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home" />
+        <activity
+            android:name=".CreateClassroom"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ClassroomDetail"
+            android:label="@string/title_activity_classroom_detail"
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.classroom.classroom1.Home" />
+        </activity>
+        <activity
+            android:name=".AddUserActivity"
+            android:parentActivityName=".ClassroomDetail" />
+    </application>
+
+</manifest>

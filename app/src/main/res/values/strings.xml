@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ClassRoom</string>
+    <string name="create">Create</string>
+    <string name="classroom_name">Classroom Name</string>
+    <string name="description">Description</string>
+    <string name="class_card_image_description">First Class</string>
+    <string name="class_name">TextView</string>
+    <string name="default_card_class_name">TY 2018–19: Operating System</string>
+    <string name="default_class_card_description">Operating system class conducted by Mr. Bhole. Course Code: II109. Credits: 4</string>
+    <string name="enter_room">Enter Class</string>
+    <string name="view_assignments">View Assignments</string>
+    <string name="title_activity_classroom_detail">ClassroomDetail</string>
+    <string name="tab_text_1">Activity</string>
+    <string name="tab_text_2">Members</string>
+    <string name="tab_text_3">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_classroom">Welcome to ClassRoom</string>
+    <string name="logout">Logout</string>
+    <string name="add_post_placeholder">What do you want to Post?</string>
+    <string name="add_post_btn_txt">Add Post</string>
+    <string name="no_classrooms_yet">No classrooms yet</string>
+    <string name="title_activity_show_images">ShowImagesActivity</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <Button
+        android:id="@+id/addPostBtn"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/add_post_btn_txt"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postEditText" />
+
+    <EditText
+        android:id="@+id/postEditText"
+        android:layout_width="259dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="176dp"
+        android:ems="10"
+        android:hint="@string/add_post_placeholder"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/choose_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toEndOf="@+id/postEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/attach_icon" />
+
+    <ImageView
+        android:id="@+id/attachment_img_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/addPostBtn"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/ic_menu_report_image"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPostBtn"
+        app:srcCompat="@drawable/baseline_photo_library_black_24dp" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/addPostBtn"-->
+        <!--android:layout_marginStart="48dp"-->
+        <!--android:layout_marginLeft="48dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:src="@android:drawable/ic_menu_report_image"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/addPostBtn"-->
+        <!--app:srcCompat="@drawable/baseline_photo_library_black_24dp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/editText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:ems="10"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:text="1. Attachment\n2. Attachment 2\n2. Attachment 2\n2. Attachment 2"-->
+        <!--android:textSize="12sp"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imageView"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/addPostBtn" />-->
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
