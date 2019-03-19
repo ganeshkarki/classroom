@@ -1,11 +1,9 @@
-Project Detail: [Google Drive Folder](https://drive.google.com/drive/folders/1NYKdhtDSegwmDQCyhrtBdMgvRjnFViso)
+# Classroom Android App
 
-UI Design: [Marvel Mockup](https://marvelapp.com/4bcb2j0/screen/44397618)
+ClassRoom is an app which will allow teachers to create virtual classroom for their students where they can upload syllabus, notes, subject related information and other notices online. 
+Students will be notified for the updates and can check that information anytime anywhere using the app.
 
-Synopsis: [Google Doc](https://docs.google.com/document/d/1g0thaW45Mb7ABqZ0b1zWyRPY2QJeZRYqvlmNdb9AybA/edit)
-
-Important steps:
-
+## Configuration
 1. Create fingerprint on local PC:
 ```
 keytool -exportcert -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
@@ -14,3 +12,18 @@ keytool -exportcert -list -v -alias androiddebugkey -keystore ~/.android/debug.k
 
 
 3. Download google.json and place in `app/src/google-services.json`
+
+
+## Screenshots
+<span>
+  <image src ="screenshots/Screenshot_1552993424.png" height="414">
+  <image src ="screenshots/Screenshot_1552994422.png" height="414">
+  <image src ="screenshots/Screenshot_1552994771.png" height="414">
+  <image src ="screenshots/Screenshot_1552994918.png" height="414">
+  <image src ="screenshots/Screenshot_1552994951.png" height="414">
+  <image src ="screenshots/Screenshot_1552994965.png" height="414">
+</span>
+  
+
+## Built with
+- [Firebase](https://firebase.google.com/)
