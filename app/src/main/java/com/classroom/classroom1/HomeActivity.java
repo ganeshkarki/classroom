@@ -25,7 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     public static final String NAME_PROPERTY = "name";
     public static final String DESCRIPTION_PROPERTY = "description";
     public static final String USER_COLLECTION = "user";
@@ -136,7 +136,7 @@ public class Home extends AppCompatActivity {
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Home.this, ClassroomDetail.class);
+                Intent intent = new Intent(HomeActivity.this, ClassroomDetail.class);
                 intent.putExtra(CLASSROOM_ID, classroomId);
                 intent.putExtra(CLASSROOM_NAME, classroomName);
                 startActivity(intent);
@@ -172,7 +172,7 @@ public class Home extends AppCompatActivity {
         fabAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Home.this, CreateClassroom.class));
+                startActivity(new Intent(HomeActivity.this, CreateClassroom.class));
             }
         });
     }
@@ -196,7 +196,7 @@ public class Home extends AppCompatActivity {
 
     public void signOut() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }

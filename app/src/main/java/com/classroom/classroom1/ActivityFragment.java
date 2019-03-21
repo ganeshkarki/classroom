@@ -47,7 +47,7 @@ public class ActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_activity, container, false);
         parentLayout = view.findViewById(R.id.postCardHolder);
-        classroomId = getArguments().getString(Home.CLASSROOM_ID);
+        classroomId = getArguments().getString(HomeActivity.CLASSROOM_ID);
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
         loadPosts(classroomId);

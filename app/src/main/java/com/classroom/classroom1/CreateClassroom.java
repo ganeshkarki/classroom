@@ -88,7 +88,7 @@ public class CreateClassroom extends AppCompatActivity {
     public void createClassroom(View view) {
         addClassroomToFireStore();
 
-        Intent intent = new Intent(CreateClassroom.this, Home.class);
+        Intent intent = new Intent(CreateClassroom.this, HomeActivity.class);
         startActivity(intent);
     }
 

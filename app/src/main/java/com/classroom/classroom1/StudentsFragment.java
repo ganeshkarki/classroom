@@ -50,10 +50,10 @@ public class StudentsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_students, container, false);
         parentLayout = view.findViewById(R.id.member_container);
 
-        classroomId = getArguments().getString(Home.CLASSROOM_ID);
+        classroomId = getArguments().getString(HomeActivity.CLASSROOM_ID);
 
         addHeaderCardToView(true);
-        loadMembers(getArguments().getString(Home.CLASSROOM_ID));
+        loadMembers(getArguments().getString(HomeActivity.CLASSROOM_ID));
 
         return view;
     }

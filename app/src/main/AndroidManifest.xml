@@ -21,7 +21,7 @@
             android:name=".AddPostActivity"
             android:parentActivityName=".ClassroomDetail"></activity>
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,17 +29,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Home" />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".CreateClassroom"
-            android:parentActivityName=".Home" />
+            android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".ClassroomDetail"
             android:label="@string/title_activity_classroom_detail"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.classroom.classroom1.Home" />
+                android:value="com.classroom.classroom1.HomeActivity" />
         </activity>
         <activity
             android:name=".AddUserActivity"

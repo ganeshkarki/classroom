@@ -50,10 +50,10 @@ public class ClassroomDetail extends AppCompatActivity {
         // Get the transferred data from source activity.
 
         Intent intent = getIntent();
-        setTitle(intent.getStringExtra(Home.CLASSROOM_NAME));
+        setTitle(intent.getStringExtra(HomeActivity.CLASSROOM_NAME));
         Log.i(TAG, "Title set");
 
-        classroomId = intent.getStringExtra(Home.CLASSROOM_ID);
+        classroomId = intent.getStringExtra(HomeActivity.CLASSROOM_ID);
         Log.i(TAG, "received " + classroomId + " id from intent");
 
         initializeFragment();
@@ -152,7 +152,7 @@ public class ClassroomDetail extends AppCompatActivity {
 
         // Create a bundle to pass class id to fragments
         Bundle bundle = new Bundle();
-        bundle.putString(Home.CLASSROOM_ID, classroomId);
+        bundle.putString(HomeActivity.CLASSROOM_ID, classroomId);
 
         activityFragment.setArguments(bundle);
         studentsFragment.setArguments(bundle);

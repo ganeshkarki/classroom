@@ -32,7 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Login extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -47,14 +47,14 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         setContentView(R.layout.login);
         signin = (SignInButton) findViewById(R.id.sign_in_button);
 
-        findViewById(R.id.sign_in_button).setOnClickListener(Login.this);
+        findViewById(R.id.sign_in_button).setOnClickListener(LoginActivity.this);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(Login.this, this)
+                .enableAutoManage(LoginActivity.this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
@@ -90,9 +90,9 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        Toast.makeText(Login.this, "" + credential.getProvider(), Toast.LENGTH_LONG).show();
+        Toast.makeText(LoginActivity.this, "" + credential.getProvider(), Toast.LENGTH_LONG).show();
 
-        final Intent intent = new Intent(this, Home.class);
+        final Intent intent = new Intent(this, HomeActivity.class);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -105,7 +105,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                                 startActivity(intent);
                             }
                         } else {
-                            Toast.makeText(Login.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
